@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-  - "0.12"
-  - "4.0"
+  - "0.12.x"
+  - "4.0.x"
 branches:
   only:
     - master
@@ -9,7 +9,7 @@ branches:
 before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - npm install --quiet -g gulp karma eslint
+  - npm install --quiet -g gulp bower karma eslint
 
 script: gulp
 
