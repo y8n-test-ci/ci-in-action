@@ -71,12 +71,6 @@ module.exports = function (config) {
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         browsers: ['Chrome'],
-        customLaunchers: {  
-          Chrome_travis_ci: {
-            base: 'Chrome',
-            flags: ['--no-sandbox']
-          }
-        },
 
 
         // Continuous Integration mode
@@ -90,6 +84,5 @@ module.exports = function (config) {
     if(process.env.TRAVIS){
         configuration.browsers = ['Chrome_travis_ci'];
     }
-
     config.set(configuration);
 }

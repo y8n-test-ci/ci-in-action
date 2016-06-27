@@ -1,7 +1,7 @@
 {
   "name": "angular-ui-fugu",
   "version": "1.0.0",
-  "description": "UI Fugu ",
+  "description": "UI Fugu",
   "main": "dist/js/ui-fugu.js",
   "repository": {
     "type": "git",
