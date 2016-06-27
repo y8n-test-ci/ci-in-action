@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Mon Dec 28 2015 15:33:09 GMT+0800 (CST)
 
-module.exports = function (config) {
+module.exports = function(config) {
     var configuration = {
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -38,16 +38,18 @@ module.exports = function (config) {
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: { 'src/*/*.js': ['coverage'] },
+        preprocessors: {
+            'src/*/*.js': ['coverage']
+        },
 
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress','coverage'],
+        reporters: ['progress', 'coverage'],
         coverageReporter: {
             type: 'lcov',
-            dir : 'coverage/'
+            dir: 'coverage/'
         },
 
 
@@ -71,6 +73,12 @@ module.exports = function (config) {
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         browsers: ['Chrome'],
+        customLaunchers: {
+            Chrome_travis_ci: {
+                base: 'Chrome',
+                flags: ['--no-sandbox']
+            }
+        },
 
 
         // Continuous Integration mode
@@ -81,7 +89,7 @@ module.exports = function (config) {
         // how many browser should be started simultaneous
         concurrency: Infinity
     };
-    if(process.env.TRAVIS){
+    if (process.env.TRAVIS) {
         configuration.browsers = ['Chrome_travis_ci'];
     }
     config.set(configuration);
