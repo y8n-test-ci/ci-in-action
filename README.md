@@ -4,6 +4,7 @@
 [![codecov](https://codecov.io/gh/xgfe/angular-ui-fugu/branch/master/graph/badge.svg)](https://codecov.io/gh/xgfe/angular-ui-fugu)
 
 ## 依赖说明
+
 本组件的开发主要依赖于以下几个库:
 
 - Angular JS(v1.2.29): 组件库在1.2.29版本下进行测试,适用于1.2.x-1.3.20的AngularJS。
