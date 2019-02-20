@@ -64,7 +64,6 @@ angular.module('fuguDemo').controller('alertDemoCtrl',['$scope', function ($scop
  */
  <div ng-controller="alertDemoCtrl">
     <fugu-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="true" close-func="closeAlert($index)" has-icon="true">{{alert.msg}}</fugu-alert>
-
     
 </div>
 
